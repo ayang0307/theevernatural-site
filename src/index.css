@@ -1,0 +1,65 @@
+@import "tailwindcss";
+
+@theme {
+  /* Palette carried over from the 2024 redesign */
+  --color-cream: #ffe7b7;
+  --color-cream-soft: #fff6e3;
+  --color-forest: #214e34;
+  --color-leaf: #3c9242;
+  --color-honey: #edc226;
+  --color-gold: #ffd733;
+  --color-brazil: #002776;
+  --color-plum: #2d146e;
+  --color-ink: #121212;
+
+  --font-display: "IM FELL DW Pica SC", Georgia, serif;
+  --font-body: "Abhaya Libre", Georgia, serif;
+
+  --shadow-card-green: 0 8px 30px rgba(76, 175, 80, 0.35);
+  --shadow-card-yellow: 0 8px 30px rgba(255, 193, 7, 0.35);
+  --shadow-card-blue: 0 8px 30px rgba(63, 81, 181, 0.35);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  @apply bg-white text-ink font-body antialiased;
+  overflow-x: hidden;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  @apply font-display;
+}
+
+/* Offset honey highlight behind a heading, from the redesign */
+.highlight-title {
+  position: relative;
+  display: inline-block;
+  z-index: 1;
+}
+.highlight-title::before {
+  content: "";
+  position: absolute;
+  left: 5%;
+  top: 30%;
+  width: 100%;
+  height: 100%;
+  background-color: var(--color-honey);
+  opacity: 0.5;
+  z-index: -1;
+  border-radius: 5px;
+}
+
+.card-lift {
+  transition:
+    transform 200ms ease,
+    box-shadow 200ms ease;
+}
+.card-lift:hover {
+  transform: translateY(-4px);
+}
