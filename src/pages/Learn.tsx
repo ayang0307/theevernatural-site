@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+import { asset } from "../lib/asset";
 import Section from "../components/ui/Section";
 import HighlightTitle from "../components/ui/HighlightTitle";
 import Button from "../components/ui/Button";
@@ -32,7 +33,7 @@ export default function Learn() {
         <Section key={s.id} id={s.id} tone={i % 2 ? "white" : "cream"} className="scroll-mt-20">
           <div className="rounded-xl bg-gray-300/60 p-3 lg:p-4">
             <div className="flex flex-col items-center gap-6 rounded-lg bg-white p-6 shadow-xl sm:flex-row sm:items-start sm:gap-10 lg:p-10">
-              <img src={s.icon} alt="" className="h-20 w-20 shrink-0 sm:mt-2" />
+              <img src={asset(s.icon)} alt="" className="h-20 w-20 shrink-0 sm:mt-2" />
               <div className="hidden w-0.5 self-stretch bg-gray-300 sm:block" />
               <div className="flex-1">
                 <h2 className="text-3xl text-forest sm:text-4xl">{s.title}</h2>

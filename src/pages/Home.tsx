@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+import { asset } from "../lib/asset";
 import Section from "../components/ui/Section";
 import HighlightTitle from "../components/ui/HighlightTitle";
 import Button from "../components/ui/Button";
@@ -36,7 +37,7 @@ export default function Home() {
       {/* Hero */}
       <section className="relative flex min-h-[560px] h-[calc(100svh-88px)] max-h-[960px] w-full items-center justify-center overflow-hidden">
         <img
-          src="/brand/sunflower.png"
+          src={asset("/brand/sunflower.png")}
           alt=""
           className="absolute inset-0 h-full w-full object-cover"
           fetchPriority="high"
@@ -76,7 +77,7 @@ export default function Home() {
       {/* Welcome */}
       <Section id="welcome">
         <img
-          src="/brand/bee1.png"
+          src={asset("/brand/bee1.png")}
           alt=""
           className="pointer-events-none absolute -left-10 top-0 z-0 hidden w-72 opacity-70 md:block"
           aria-hidden
@@ -84,7 +85,7 @@ export default function Home() {
         <div className="flex flex-col items-center gap-8 md:flex-row md:gap-12">
           <div className="flex flex-col items-center gap-6 md:w-2/5">
             <h2 className="text-4xl text-forest sm:text-5xl lg:text-6xl">Welcome to</h2>
-            <img src="/brand/logo.png" alt="The Ever Natural" className="w-40 sm:w-52" />
+            <img src={asset("/brand/logo.png")} alt="The Ever Natural" className="w-40 sm:w-52" />
           </div>
           <div className="hidden h-48 w-0.5 bg-gray-300 md:block" />
           <p className="rounded-lg bg-gray-200/40 p-6 text-center text-lg leading-loose md:w-3/5 md:text-xl">
@@ -109,7 +110,7 @@ export default function Home() {
       {/* Packed with */}
       <Section tone="cream">
         <img
-          src="/brand/bee2.png"
+          src={asset("/brand/bee2.png")}
           alt=""
           className="pointer-events-none absolute -right-8 top-8 z-0 hidden w-72 opacity-70 md:block"
           aria-hidden
@@ -119,8 +120,8 @@ export default function Home() {
           {packedWith.map((item) => (
             <li key={item.label} className="flex items-center gap-5">
               <div className="relative flex h-20 w-20 shrink-0 items-center justify-center">
-                <img src="/brand/circle.svg" alt="" className="absolute inset-0 h-full w-full" />
-                <img src={item.icon} alt="" className="relative h-10 w-10" />
+                <img src={asset("/brand/circle.svg")} alt="" className="absolute inset-0 h-full w-full" />
+                <img src={asset(item.icon)} alt="" className="relative h-10 w-10" />
               </div>
               <p className="text-lg sm:text-xl md:text-2xl">
                 <span className="font-semibold text-forest">{item.label}:</span> {item.text}
@@ -133,7 +134,7 @@ export default function Home() {
       {/* Brazil */}
       <Section>
         <img
-          src="/brand/brasil.png"
+          src={asset("/brand/brasil.png")}
           alt=""
           className="pointer-events-none absolute -left-16 top-1/2 z-0 hidden w-96 -translate-y-1/2 opacity-15 lg:block"
           aria-hidden

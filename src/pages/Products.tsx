@@ -5,6 +5,8 @@ import ProductCard from "../components/ui/ProductCard";
 import Seo from "../components/ui/Seo";
 import { formLabel, products, type ProductForm } from "../data/products";
 import { Link } from "react-router-dom";
+import Button from "../components/ui/Button";
+import { site } from "../data/site";
 
 const forms: ("all" | ProductForm)[] = ["all", "drops", "capsules", "softgels", "spray"];
 
@@ -30,7 +32,8 @@ export default function Products() {
           .
         </p>
 
-        <div className="mt-8 flex flex-wrap gap-2" role="tablist" aria-label="Filter by type">
+        <div className="mt-8 flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between">
+          <div className="flex flex-wrap gap-2" role="tablist" aria-label="Filter by type">
           {forms.map((f) => (
             <button
               key={f}
@@ -45,6 +48,10 @@ export default function Products() {
               {f === "all" ? "All" : formLabel[f]}
             </button>
           ))}
+          </div>
+          <Button href={site.links.ebay} variant="secondary" className="self-start px-5 py-2 text-base">
+            Shop on eBay
+          </Button>
         </div>
 
         <div className="mt-10 grid gap-8 sm:grid-cols-2 lg:grid-cols-3">

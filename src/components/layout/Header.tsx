@@ -1,4 +1,5 @@
 import { useEffect, useRef, useState } from "react";
+import { asset } from "../../lib/asset";
 import { Link, NavLink } from "react-router-dom";
 import { nav } from "../../data/site";
 
@@ -33,7 +34,7 @@ export default function Header() {
       <div className="mx-auto flex max-w-7xl items-center justify-between px-4 py-2 sm:px-6">
         <Link to="/" onClick={() => setOpen(false)} aria-label="The Ever Natural home">
           <img
-            src="/brand/logo.png"
+            src={asset("/brand/logo.png")}
             alt="The Ever Natural"
             className="h-auto w-28 select-none md:w-32 lg:w-40"
             draggable={false}

@@ -5,6 +5,7 @@ import PayPalButton from "../components/ui/PayPalButton";
 import ProductCard from "../components/ui/ProductCard";
 import Seo from "../components/ui/Seo";
 import { formatUSD, formLabel, getProduct, products } from "../data/products";
+import { site } from "../data/site";
 
 export default function ProductDetail() {
   const { slug } = useParams();
@@ -55,6 +56,11 @@ export default function ProductDetail() {
               <p className="mt-3 text-sm text-ink/60">
                 Prefer a check or money order? See{" "}
                 <Link to="/services" className="text-forest underline">payment &amp; shipping</Link>.
+                {" "}Or buy on our{" "}
+                <a href={site.links.ebay} target="_blank" rel="noreferrer" className="text-forest underline">
+                  eBay store
+                </a>
+                .
               </p>
             </div>
           </div>

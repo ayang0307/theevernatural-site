@@ -1,4 +1,5 @@
 import Section from "../components/ui/Section";
+import { asset } from "../lib/asset";
 import HighlightTitle from "../components/ui/HighlightTitle";
 import Button from "../components/ui/Button";
 import Seo from "../components/ui/Seo";
@@ -15,7 +16,7 @@ export default function About() {
       <Seo title="About Us" description="The story behind The Ever Natural, a family business importing Brazilian green propolis to New Jersey." />
       <Section>
         <img
-          src="/brand/brasil.png"
+          src={asset("/brand/brasil.png")}
           alt=""
           className="pointer-events-none absolute -right-20 top-10 z-0 hidden w-[28rem] opacity-10 lg:block"
           aria-hidden

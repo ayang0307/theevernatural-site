@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+import { asset } from "../../lib/asset";
 import { nav, phoneHref, site } from "../../data/site";
 
 export default function Footer() {
@@ -7,7 +8,7 @@ export default function Footer() {
     <footer className="mt-16 bg-forest text-cream-soft">
       <div className="mx-auto grid max-w-7xl gap-10 px-4 py-12 sm:px-6 md:grid-cols-3">
         <div>
-          <img src="/brand/logo.png" alt="" className="mb-4 w-32 rounded bg-white/90 p-2" />
+          <img src={asset("/brand/logo.png")} alt="" className="mb-4 w-32 rounded bg-white/90 p-2" />
           <p className="max-w-xs text-base leading-relaxed text-cream-soft/90">
             {site.legalName} strives to deliver the best in high-value, affordably priced
             products. Brazilian Green Propolis, shipped from {site.address.city},{" "}
